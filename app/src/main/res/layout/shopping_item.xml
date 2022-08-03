@@ -32,7 +32,7 @@
         android:id="@+id/productdescTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="90dp"
         android:layout_marginEnd="16dp"
         android:ellipsize="end"
         android:lines="1"
@@ -49,7 +49,7 @@
         android:id="@+id/productpriceTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="90dp"
         android:layout_marginEnd="16dp"
         android:ellipsize="end"
         android:lines="1"
@@ -62,8 +62,13 @@
         tools:text="Price" />
 
 <ImageView
+    android:id="@+id/productImage"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/productdescTv"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/productTitleTv"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
