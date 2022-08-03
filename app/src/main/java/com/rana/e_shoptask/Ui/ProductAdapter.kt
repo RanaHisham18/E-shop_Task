@@ -37,6 +37,11 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
         val productdescTv = view.productdescTv
         val productpriceTv = view.productpriceTv
     }
+
+    fun bind(data: ProductModel){
+        //pass the model items into the views
+        
+    }
 }
 
 
