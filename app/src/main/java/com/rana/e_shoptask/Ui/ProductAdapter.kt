@@ -1,5 +1,6 @@
 package com.rana.e_shoptask.Ui
 
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,15 +32,13 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
         if (productlist == null) return 0
         else return productlist?.size!!
     }
-    class MyViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        val productImage = view.productImage
-        val productTitleTv = view.productTitleTv
-        val productdescTv = view.productdescTv
-        val productpriceTv = view.productpriceTv
+    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
+
+      val Image = view.productImage
     }
 
     fun bind(data: ProductModel){
-        //pass the model items into the views
+        //pass the model items into the vie
         
     }
 }
