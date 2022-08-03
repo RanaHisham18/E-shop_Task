@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#0c3a5c</color>
     <color name="orange">#e58d26</color>
+    <color name="cardColor">#F3F3F3</color>
 </resources>
