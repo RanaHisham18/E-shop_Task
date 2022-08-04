@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface IProductInstance{
 
     @GET("dummyjson.com/products")
-   fun fetchProducts():  Call  <List <ProductModel>>
+   fun fetchProducts():  Call <List <ProductModel>>
 }
