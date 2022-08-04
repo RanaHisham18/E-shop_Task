@@ -1,14 +1,18 @@
 package com.rana.e_shoptask.Ui
 
+import android.content.Context
 import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.rana.e_shoptask.R
 import kotlin.reflect.KFunction1
 
-class ProductAdapter: RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
+class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
 
 
     private var productlist: List<ProductModel>?= null
@@ -25,7 +29,13 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ProductAdapter.MyViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
+        val itemsViewModel = productlist?.get(position)
+        if (itemsViewModel != null) {
+            holder.textView.text = itemsViewModel.title
+            holder.textView.text = itemsViewModel.description
+            holder.textView.text = itemsViewModel.price
+        }
     }
 
     override fun getItemCount(): Int {
@@ -34,13 +44,16 @@ class ProductAdapter: RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
     }
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-      val Image = view.productImage
+//        val imageView: ImageView = itemView.findViewById(R.id.productImage)
+        val textView: TextView = itemView.findViewById(R.id.productTitleTv)
+        val textViewdesc: TextView = itemView.findViewById(R.id.productdescTv)
+        val textViewprice: TextView = itemView.findViewById(R.id.productpriceTv)
+
+        fun bindTo(productlist: List<ProductModel>?, activity: MainActivity){
+
+}
     }
 
-    fun bind(data: ProductModel){
-        //pass the model items into the vie
-        
-    }
 }
 
 
