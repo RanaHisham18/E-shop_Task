@@ -1,10 +1,7 @@
 package com.rana.e_shoptask.Ui
 
 import android.annotation.SuppressLint
-import android.graphics.drawable.ClipDrawable.HORIZONTAL
 import android.os.Bundle
-import android.widget.GridLayout.HORIZONTAL
-import android.widget.LinearLayout.HORIZONTAL
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -25,12 +22,13 @@ class ShoppingList : AppCompatActivity() {
     private fun initRecyclerView() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.productsRecyclerView)
-        recyclerAdapter = ProductAdapter(this)
+        recyclerAdapter = ProductAdapter(this, position = Int)
         recyclerView.adapter = recyclerAdapter
+
         val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
         recyclerView.layoutManager = linearLayoutManager
-
+         recyclerAdapter.setOnItemClickListener(object : ProductAdapter.onItemClickListener)
 
     }
 

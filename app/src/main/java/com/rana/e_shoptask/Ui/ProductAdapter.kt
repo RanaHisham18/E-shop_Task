@@ -1,6 +1,7 @@
 package com.rana.e_shoptask.Ui
 
 import android.content.Context
+import android.icu.text.Transliterator
 import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rana.e_shoptask.R
 
 
-class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
+class ProductAdapter(shoppingList: ShoppingList, position: Int.Companion) : RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
 
 
     private var productlist: List<ProductModel>?= null
@@ -48,6 +49,8 @@ class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductA
         val textViewdesc: TextView = itemView.findViewById(R.id.productdescTv)
         val textViewprice: TextView = itemView.findViewById(R.id.productpriceTv)
     }
+
+
 
 }
 
