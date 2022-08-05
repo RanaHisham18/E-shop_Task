@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rana.e_shoptask.R
-import kotlin.reflect.KFunction1
+
 
 class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductAdapter.MyViewHolder>() {
 
@@ -23,7 +23,6 @@ class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductA
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
     : ProductAdapter.MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_item, parent,false)
-
         return MyViewHolder(view)
     }
 
@@ -32,8 +31,9 @@ class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductA
         val itemsViewModel = productlist?.get(position)
         if (itemsViewModel != null) {
             holder.textView.text = itemsViewModel.title
-            holder.textView.text = itemsViewModel.description
-            holder.textView.text = itemsViewModel.price
+            holder.textViewdesc.text = itemsViewModel.description
+            holder.textViewprice.text = itemsViewModel.price
+          //  holder.imageView.setImageResource(itemsViewModel.image)
         }
     }
 
@@ -41,19 +41,17 @@ class ProductAdapter(shoppingList: ShoppingList) : RecyclerView.Adapter<ProductA
         if (productlist == null) return 0
         else return productlist?.size!!
     }
-    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-//        val imageView: ImageView = itemView.findViewById(R.id.productImage)
+    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
+       // val imageView: ImageView = itemView.findViewById(R.id.productImage)
         val textView: TextView = itemView.findViewById(R.id.productTitleTv)
         val textViewdesc: TextView = itemView.findViewById(R.id.productdescTv)
         val textViewprice: TextView = itemView.findViewById(R.id.productpriceTv)
-
-        fun bindTo(productlist: List<ProductModel>?, activity: MainActivity){
-
-}
     }
 
 }
+
+
 
 
 

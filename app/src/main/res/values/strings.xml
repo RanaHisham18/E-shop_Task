@@ -6,6 +6,6 @@
     <string name="last_name">Last Name</string>
     <string name="sign_up">Sign Up</string>
     <string name="log_in">Log IN</string>
-    <string name="don_t_have_an_account_just_sign_up">Don\'t have an account? Just Sign Up</string>
+    <string name="don_t_have_an_account_just_sign_up">Don\'t have an account? Sign Up</string>
 
 </resources>
