@@ -11,12 +11,13 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.rana.e_shoptask.R
+import com.rana.e_shoptask.sharedPreference.SharedPreference
 
 
 class MainActivity : AppCompatActivity() {
 
 
-    var sharedPreference: SharedPrefrences? = null
+    var sharedPreference: SharedPreference? = null
     lateinit var edt_email: EditText
     lateinit var edt_password: EditText
     lateinit var btn_login: Button
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        sharedPreference = SharedPreferences(this)
+        sharedPreference = SharedPreference(this)
         edt_email = findViewById(R.id.emailEt)
         edt_password = findViewById(R.id.passwordET)
         btn_login = findViewById(R.id.loginBT)
